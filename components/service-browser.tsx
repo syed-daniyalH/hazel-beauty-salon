@@ -66,58 +66,66 @@ export function ServiceBrowser({ services }: { services: ServiceItem[] }) {
 
   return (
     <>
-      <section className="hazel-section pt-0">
+      <section className="hazel-section pt-0 bg-[color:var(--hazel-bg)]">
         <div className="hazel-shell">
-          <div className="hazel-card-soft p-5 md:p-6">
-            <div className="grid gap-5 lg:grid-cols-[1fr_auto] lg:items-end">
-              <label className="block">
-                <span className="hazel-label">Search services</span>
-                <div className="flex items-center gap-3 border-b border-white/15 py-2">
-                  <Search className="h-4 w-4 text-[color:var(--hazel-soft-gold)]" strokeWidth={1.5} />
-                  <input
-                    value={query}
-                    onChange={(event) => setQuery(event.target.value)}
-                    className="w-full bg-transparent text-sm text-[color:var(--hazel-ivory)] outline-none placeholder:text-white/35"
-                    placeholder="Search hair, skin, makeup, bridal, waxing, and package services"
-                  />
+          <div className="border border-white/10 bg-[rgba(11,11,11,0.92)] px-4 py-4 md:px-6">
+            <div className="grid gap-6 xl:grid-cols-[1fr_auto] xl:items-end">
+              <div className="grid gap-4 lg:grid-cols-[auto_1fr] lg:items-end">
+                <div className="space-y-3">
+                  <p className="hazel-meta text-[color:var(--hazel-soft-gold)]">Search services</p>
+                  <label className="flex min-w-0 items-center gap-3 border-b border-white/15 pb-2">
+                    <Search className="h-4 w-4 shrink-0 text-[color:var(--hazel-soft-gold)]" strokeWidth={1.5} />
+                    <input
+                      value={query}
+                      onChange={(event) => setQuery(event.target.value)}
+                      className="w-full min-w-0 bg-transparent text-sm text-[color:var(--hazel-ivory)] outline-none placeholder:text-white/35"
+                      placeholder="Search services..."
+                    />
+                  </label>
                 </div>
-              </label>
 
-              <div className="flex flex-wrap gap-3">
-                <span className="hazel-meta text-[color:var(--hazel-soft-gold)]">Filter</span>
-                {HAZEL_SERVICE_FILTERS.map((filter) => (
-                  <button
-                    key={filter.id}
-                    type="button"
-                    onClick={() => setActiveFilter(filter.id)}
-                    className={cn(
-                      "border px-4 py-2 text-[0.7rem] font-semibold uppercase tracking-[0.16em] transition",
-                      activeFilter === filter.id
-                        ? "border-[color:var(--hazel-gold)] bg-[color:var(--hazel-gold)] text-[color:var(--hazel-bg)]"
-                        : "border-white/10 text-white/70 hover:border-[color:var(--hazel-gold)] hover:text-[color:var(--hazel-soft-gold)]",
-                    )}
-                  >
-                    {filter.label}
-                  </button>
-                ))}
+                <div className="space-y-3">
+                  <p className="hazel-meta text-[color:var(--hazel-soft-gold)]">Filter</p>
+                  <div className="flex flex-wrap gap-2 overflow-x-auto pb-1">
+                    {HAZEL_SERVICE_FILTERS.map((filter) => (
+                      <button
+                        key={filter.id}
+                        type="button"
+                        onClick={() => setActiveFilter(filter.id)}
+                        className={cn(
+                          "whitespace-nowrap border px-4 py-2 text-[0.68rem] font-semibold uppercase tracking-[0.18em] transition",
+                          activeFilter === filter.id
+                            ? "border-[color:var(--hazel-gold)] bg-[color:var(--hazel-gold)] text-[color:var(--hazel-bg)]"
+                            : "border-white/10 text-white/72 hover:border-[color:var(--hazel-gold)] hover:text-[color:var(--hazel-soft-gold)]",
+                        )}
+                      >
+                        {filter.label}
+                      </button>
+                    ))}
+                  </div>
+                </div>
               </div>
-            </div>
 
-            <div className="mt-4 flex flex-wrap items-center justify-between gap-3 text-xs uppercase tracking-[0.18em] text-white/44">
-              <p>{visibleCount} service{visibleCount === 1 ? "" : "s"} visible</p>
-              <p>Prices are verified from the stitched Hazel exports. Ask Hazel appears where the price is quote-based.</p>
+              <div className="flex flex-col gap-2 text-xs uppercase tracking-[0.18em] text-white/44 xl:items-end">
+                <p>
+                  {visibleCount} service{visibleCount === 1 ? "" : "s"} visible
+                </p>
+                <p className="max-w-[40rem] xl:text-right">
+                  Prices are verified from the stitched Hazel exports. Ask Hazel appears where the price is quote-based.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="hazel-section pt-0">
+      <section className="hazel-section pt-0 bg-[color:var(--hazel-bg)]">
         <div className="hazel-shell space-y-16">
           {sections.length > 0 ? (
-            sections.map((section) => (
+            sections.map((section, index) => (
               <div key={section.id} className="space-y-6">
-                <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
-                  <div>
+                <div className={cn("flex flex-col gap-3", index === 0 ? "items-center text-center" : "md:flex-row md:items-end md:justify-between")}>
+                  <div className={cn(index === 0 && "max-w-2xl")}>
                     <p className="hazel-kicker text-[color:var(--hazel-soft-gold)]">{section.label}</p>
                     <p className="mt-2 max-w-2xl text-sm text-white/68">{section.description}</p>
                   </div>
@@ -260,4 +268,3 @@ export function ServiceBrowser({ services }: { services: ServiceItem[] }) {
     </>
   );
 }
-
