@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ArrowUpRight, BadgeCheck, Gem, Leaf, Sparkles } from "lucide-react";
 
 import { FaqAccordion } from "@/components/faq-accordion";
-import { PageHero } from "@/components/page-hero";
+import { HomeHero } from "@/components/home-hero";
 import { SectionHeading } from "@/components/section-heading";
 import { buildPageMetadata } from "@/lib/seo";
 import { resolveHazelImageProps } from "@/lib/hazel-media";
@@ -11,7 +11,6 @@ import {
   HAZEL_EDITORIAL_CARDS,
   HAZEL_FAQS,
   HAZEL_HERO_SERVICE_TILES,
-  HAZEL_IMAGES,
   HAZEL_INFO,
   HAZEL_PACKAGE_ITEMS,
   HAZEL_SERVICES,
@@ -43,30 +42,7 @@ export default function HomePage() {
 
   return (
     <>
-      <PageHero
-        eyebrow="Johar Town · Lahore"
-        size="home"
-        title={
-          <>
-            Beauty, <span className="italic text-[color:var(--hazel-soft-gold)]">made personal.</span>
-          </>
-        }
-        summary={
-          <>
-            Hazel is an editorial beauty salon in Johar Town, Lahore, built around verified hair, skin, makeup,
-            bridal, waxing, and package services. Appointments are handled by request, not real-time scheduling.
-          </>
-        }
-        image={HAZEL_IMAGES.homeHero}
-        imageAlt="Hazel Beauty Salon editorial hero"
-        primaryCta={{ label: "Book Your Experience", href: "/book-appointment" }}
-        secondaryCta={{ label: "Explore Services", href: "/services" }}
-        note={
-          <>
-            {HAZEL_INFO.byAppointmentNote} Use WhatsApp or the request forms to confirm availability.
-          </>
-        }
-      />
+      <HomeHero />
 
       <section className="hazel-section pt-0">
         <div className="hazel-shell">

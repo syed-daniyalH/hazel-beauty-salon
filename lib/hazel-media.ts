@@ -9,8 +9,8 @@ export type HazelImageTreatment = {
 
 export const HAZEL_IMAGE_TREATMENTS: Record<string, HazelImageTreatment> = {
   [HAZEL_IMAGES.homeHero]: {
-    focalClassName: "object-[76%_center] md:object-[78%_center] lg:object-[80%_center]",
-    toneClassName: "saturate-95 contrast-105",
+    focalClassName: "object-[78%_center] md:object-[80%_center] lg:object-[82%_center]",
+    toneClassName: "saturate-90 contrast-105",
   },
   [HAZEL_IMAGES.servicesHero]: {
     focalClassName: "object-[70%_38%] md:object-[72%_34%]",
