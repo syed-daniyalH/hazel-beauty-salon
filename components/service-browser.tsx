@@ -64,40 +64,47 @@ export function ServiceBrowser({ services }: { services: ServiceItem[] }) {
   }, [visibleServices]);
 
   const visibleCount = visibleServices.length;
+  const visibleCountLabel = visibleCount === 1 ? "SERVICE" : "SERVICES";
 
   return (
     <>
       <section className="hazel-section pt-0 bg-[color:var(--hazel-bg)]">
         <div className="hazel-shell">
-          <div className="border border-white/10 bg-[rgba(11,11,11,0.92)] px-4 py-4 md:px-6">
-            <div className="grid gap-6 xl:grid-cols-[1fr_auto] xl:items-end">
-              <div className="grid gap-4 lg:grid-cols-[auto_1fr] lg:items-end">
-                <div className="space-y-3">
-                  <p className="hazel-meta text-[color:var(--hazel-soft-gold)]">Search services</p>
-                  <label className="flex min-w-0 items-center gap-3 border-b border-white/15 pb-2">
-                    <Search className="h-4 w-4 shrink-0 text-[color:var(--hazel-soft-gold)]" strokeWidth={1.5} />
+          <div className="border border-[color:var(--hazel-outline)] bg-[color:var(--hazel-charcoal)] px-6 py-6 md:px-8 md:py-7">
+            <div className="grid gap-5 lg:grid-cols-12 lg:items-start lg:gap-6">
+              <div className="lg:col-span-3 lg:min-w-0">
+                <label className="block">
+                  <span className="hazel-label text-[color:var(--hazel-soft-gold)]">SEARCH SERVICES</span>
+                  <div className="mt-3 flex items-center gap-3 border-b border-white/12 pb-2 transition-colors focus-within:border-[color:var(--hazel-gold)]">
+                    <Search className="h-4 w-4 shrink-0 text-[color:var(--hazel-soft-gold)]" strokeWidth={1.75} />
                     <input
                       value={query}
                       onChange={(event) => setQuery(event.target.value)}
-                      className="w-full min-w-0 bg-transparent text-sm text-[color:var(--hazel-ivory)] outline-none placeholder:text-white/35"
+                      className="h-9 w-full min-w-0 bg-transparent text-[0.92rem] text-[color:var(--hazel-ivory)] outline-none placeholder:text-white/32"
                       placeholder="Search services..."
+                      type="text"
+                      autoComplete="off"
+                      inputMode="search"
                     />
-                  </label>
-                </div>
+                  </div>
+                </label>
+              </div>
 
+              <div className="lg:col-span-6 lg:min-w-0">
                 <div className="space-y-3">
-                  <p className="hazel-meta text-[color:var(--hazel-soft-gold)]">Filter</p>
-                  <div className="flex flex-wrap gap-2 overflow-x-auto pb-1">
+                  <p className="hazel-label text-[color:var(--hazel-soft-gold)]">FILTER BY CATEGORY</p>
+                  <div className="-mr-1 flex min-w-0 flex-nowrap gap-2 overflow-x-auto pb-1 pr-1 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden lg:gap-0.5 lg:pb-0">
                     {HAZEL_SERVICE_FILTERS.map((filter) => (
                       <button
                         key={filter.id}
                         type="button"
                         onClick={() => setActiveFilter(filter.id)}
+                        aria-pressed={activeFilter === filter.id}
                         className={cn(
-                          "whitespace-nowrap border px-4 py-2 text-[0.68rem] font-semibold uppercase tracking-[0.18em] transition",
+                          "flex h-11 shrink-0 items-center border px-3 text-left text-[0.78rem] font-medium leading-tight tracking-[0.01em] transition-colors duration-200 focus-visible:border-[color:var(--hazel-gold)] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[color:var(--hazel-gold)] lg:px-0.5 lg:text-[0.6rem] lg:tracking-[0em]",
                           activeFilter === filter.id
-                            ? "border-[color:var(--hazel-gold)] bg-[color:var(--hazel-gold)] text-[color:var(--hazel-bg)]"
-                            : "border-white/10 text-white/72 hover:border-[color:var(--hazel-gold)] hover:text-[color:var(--hazel-soft-gold)]",
+                            ? "border-[color:var(--hazel-gold)] bg-[color:var(--hazel-gold)] text-[color:#070707]"
+                            : "border-white/12 bg-[color:rgba(18,18,18,0.6)] text-[color:var(--hazel-ivory)] hover:border-[color:var(--hazel-soft-gold)] hover:text-[color:var(--hazel-soft-gold)]",
                         )}
                       >
                         {filter.label}
@@ -107,13 +114,20 @@ export function ServiceBrowser({ services }: { services: ServiceItem[] }) {
                 </div>
               </div>
 
-              <div className="flex flex-col gap-2 text-xs uppercase tracking-[0.18em] text-white/44 xl:items-end">
-                <p>
-                  {visibleCount} service{visibleCount === 1 ? "" : "s"} visible
-                </p>
-                <p className="max-w-[40rem] xl:text-right">
-                  Prices are verified from Hazel&apos;s current menu. Ask Hazel appears where the price is quote-based.
-                </p>
+              <div className="lg:col-span-3 lg:min-w-0 lg:pl-2">
+                <div className="flex h-full flex-col justify-between gap-3 lg:items-end lg:text-right">
+                  <div className="space-y-2">
+                    <p
+                      className="text-[1.5rem] font-semibold uppercase leading-none tracking-[0.1em] text-[color:var(--hazel-ivory)]"
+                      aria-live="polite"
+                    >
+                      {visibleCount} {visibleCountLabel}
+                    </p>
+                    <p className="max-w-xs text-sm leading-relaxed text-white/68">
+                      Prices reflect Hazel&apos;s current menu. Quote-based services are marked "Ask Hazel".
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
