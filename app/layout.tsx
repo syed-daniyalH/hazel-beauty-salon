@@ -59,11 +59,10 @@ export default function RootLayout({
       <body className="min-h-screen overflow-x-hidden bg-[color:var(--hazel-bg)] text-[color:var(--hazel-ivory)] antialiased">
         <SiteHeader />
         <LocalBusinessJsonLd />
-        <main className="relative z-0 pt-20">{children}</main>
+        <main className="relative z-0 pt-[72px] md:pt-[84px]">{children}</main>
         <SiteFooter />
         <ConciergeButton />
       </body>
     </html>
   );
 }
-
