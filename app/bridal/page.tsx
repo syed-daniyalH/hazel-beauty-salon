@@ -17,6 +17,7 @@ import {
   HAZEL_IMAGES,
   HAZEL_INFO,
 } from "@/lib/hazel-data";
+import { resolveHazelImageProps } from "@/lib/hazel-media";
 
 export const metadata = buildPageMetadata({
   title: "Bridal",
@@ -111,11 +112,11 @@ export default function BridalPage() {
 
           <div className="relative min-h-[24rem] overflow-hidden border border-white/10 bg-[color:var(--hazel-charcoal)]">
             <Image
+              {...resolveHazelImageProps(HAZEL_IMAGES.bridalApproach)}
               src={HAZEL_IMAGES.bridalApproach}
               alt="Hazel bridal approach"
               fill
               sizes="(min-width: 1024px) 44vw, 100vw"
-              className="object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/72 via-black/10 to-transparent" />
           </div>

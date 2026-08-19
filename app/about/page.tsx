@@ -14,6 +14,7 @@ import {
 
 import { buildPageMetadata } from "@/lib/seo";
 import { HAZEL_IMAGES, HAZEL_INFO } from "@/lib/hazel-data";
+import { resolveHazelImageProps } from "@/lib/hazel-media";
 
 export const metadata = buildPageMetadata({
   title: "About Hazel",
@@ -54,15 +55,15 @@ export default function AboutPage() {
       <section className="relative isolate min-h-[calc(100vh-5rem)] overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
+            {...resolveHazelImageProps(HAZEL_IMAGES.aboutHero)}
             src={HAZEL_IMAGES.aboutHero}
             alt="Close-up editorial beauty hero for Hazel Beauty Salon"
             fill
             priority
             sizes="100vw"
-            className="object-cover object-center opacity-60"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[color:var(--hazel-bg)] via-transparent to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-b from-[color:var(--hazel-bg)] via-transparent to-[color:var(--hazel-bg)]/80" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/4 via-transparent to-black/22" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[color:var(--hazel-bg)]/56 via-transparent to-transparent" />
         </div>
 
         <div className="relative z-10 flex min-h-[calc(100vh-5rem)] items-center justify-center px-0 py-20">
@@ -93,11 +94,11 @@ export default function AboutPage() {
             <div className="relative lg:col-span-5">
               <div className="relative min-h-[30rem] overflow-hidden border border-black/10 shadow-[0_24px_80px_rgba(7,7,7,0.16)] md:min-h-[40rem]">
                 <Image
+                  {...resolveHazelImageProps(HAZEL_IMAGES.aboutDetail)}
                   src={HAZEL_IMAGES.aboutDetail}
                   alt="Editorial Hazel salon story image"
                   fill
                   sizes="(min-width: 1024px) 38vw, 100vw"
-                  className="object-cover"
                 />
               </div>
               <div className="absolute -bottom-6 -right-6 h-32 w-32 border border-[color:var(--hazel-gold)]/40" />
@@ -238,11 +239,14 @@ export default function AboutPage() {
 
             <div className="relative min-h-[32rem] overflow-hidden bg-[color:var(--hazel-bg)]">
               <Image
+                {...resolveHazelImageProps(
+                  HAZEL_IMAGES.map,
+                  "transition-transform duration-700 hover:scale-[1.03] opacity-85",
+                )}
                 src={HAZEL_IMAGES.map}
                 alt="Hazel salon location map"
                 fill
                 sizes="(min-width: 1024px) 48vw, 100vw"
-                className="object-cover opacity-85 transition-transform duration-700 hover:scale-[1.03]"
               />
               <div className="absolute inset-0 ring-1 ring-inset ring-[color:var(--hazel-gold)]/20 pointer-events-none" />
             </div>

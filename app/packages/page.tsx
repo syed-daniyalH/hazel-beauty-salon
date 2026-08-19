@@ -9,6 +9,7 @@ import { PageHero } from "@/components/page-hero";
 import { SectionHeading } from "@/components/section-heading";
 import { buildPageMetadata } from "@/lib/seo";
 import { HAZEL_IMAGES, HAZEL_INFO, HAZEL_PACKAGE_ITEMS } from "@/lib/hazel-data";
+import { resolveHazelImageProps } from "@/lib/hazel-media";
 
 export const metadata = buildPageMetadata({
   title: "Packages",
@@ -57,11 +58,11 @@ export default function PackagesPage() {
                 <div className="grid gap-0 md:grid-cols-[0.92fr_1.08fr]">
                   <div className="relative min-h-[16rem]">
                     <Image
+                      {...resolveHazelImageProps(pkg.image)}
                       src={pkg.image}
                       alt={pkg.name}
                       fill
                       sizes="(min-width: 1024px) 28rem, 100vw"
-                      className="object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/72 via-black/16 to-transparent" />
                   </div>

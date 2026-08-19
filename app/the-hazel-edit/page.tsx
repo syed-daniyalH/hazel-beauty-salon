@@ -7,6 +7,7 @@ import { PortfolioViewer } from "@/components/portfolio-viewer";
 import { SectionHeading } from "@/components/section-heading";
 import { buildPageMetadata } from "@/lib/seo";
 import { HAZEL_COLLECTIONS, HAZEL_IMAGES, HAZEL_INFO } from "@/lib/hazel-data";
+import { resolveHazelImageProps } from "@/lib/hazel-media";
 
 export const metadata = buildPageMetadata({
   title: "The Hazel Edit",
@@ -64,11 +65,11 @@ export default function TheHazelEditPage() {
 
           <div className="relative min-h-[24rem] overflow-hidden border border-white/10 bg-[color:var(--hazel-charcoal)]">
             <Image
+              {...resolveHazelImageProps(HAZEL_IMAGES.editDetail)}
               src={HAZEL_IMAGES.editDetail}
               alt="Hazel edit detail"
               fill
               sizes="(min-width: 1024px) 48vw, 100vw"
-              className="object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/72 via-black/10 to-transparent" />
           </div>

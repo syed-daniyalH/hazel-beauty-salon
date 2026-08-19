@@ -8,6 +8,7 @@ import { InquiryForm } from "@/components/inquiry-form";
 import { PageHero } from "@/components/page-hero";
 import { buildPageMetadata } from "@/lib/seo";
 import { HAZEL_IMAGES, HAZEL_INFO } from "@/lib/hazel-data";
+import { resolveHazelImageProps } from "@/lib/hazel-media";
 
 export const metadata = buildPageMetadata({
   title: "Contact",
@@ -71,11 +72,11 @@ export default function ContactPage() {
 
             <div className="relative min-h-[18rem] overflow-hidden border border-white/10 bg-[color:var(--hazel-charcoal)]">
               <Image
+                {...resolveHazelImageProps(HAZEL_IMAGES.aboutDetail)}
                 src={HAZEL_IMAGES.aboutDetail}
                 alt="Hazel contact editorial image"
                 fill
                 sizes="(min-width: 1024px) 40vw, 100vw"
-                className="object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/72 via-black/10 to-transparent" />
             </div>

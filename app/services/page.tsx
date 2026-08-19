@@ -5,17 +5,15 @@ import { ArrowUpRight, MessageCircleMore } from "lucide-react";
 import { FaqAccordion } from "@/components/faq-accordion";
 import { ServiceBrowser } from "@/components/service-browser";
 import { buildPageMetadata } from "@/lib/seo";
-import { HAZEL_FAQS, HAZEL_INFO, HAZEL_SERVICES } from "@/lib/hazel-data";
-
-const SERVICES_HERO_IMAGE =
-  "https://lh3.googleusercontent.com/aida-public/AB6AXuAqLpafSRDfiUtUwowiIoNsd3LqW1omXixzJvhESriHmuEpbf-81-BgJT1O--aMXar105S1DzmGhWzT9xJk7I5nFoB1zX5CV2T1J3cun8zpRwUzOt80Y4xQYi8WzBdKygxf2Xx2XrNdClPfHsjTfkoTfKwNwj12l8F2ErWlE8BZAWPeFf0zad3Wie3jMrgMiRpQz8cyvP12sz_LzU8EsjVsGv0Ko1GUcw0aEvZ7fh7cceb1BPR02-Q";
+import { HAZEL_FAQS, HAZEL_IMAGES, HAZEL_INFO, HAZEL_SERVICES } from "@/lib/hazel-data";
+import { resolveHazelImageProps } from "@/lib/hazel-media";
 
 export const metadata = buildPageMetadata({
   title: "Services",
   description:
     "Search the verified Hazel menu by hair, facials, makeup, waxing, and manicure/pedicure services. Some items are quote-based and marked Ask Hazel.",
   path: "/services",
-  image: SERVICES_HERO_IMAGE,
+  image: HAZEL_IMAGES.servicesHero,
 });
 
 export default function ServicesPage() {
@@ -44,7 +42,12 @@ export default function ServicesPage() {
                   Book an Appointment
                   <ArrowUpRight className="h-4 w-4" strokeWidth={1.5} />
                 </Link>
-                <a className="hazel-button-secondary border-white/20" href={HAZEL_INFO.whatsappUrl} target="_blank" rel="noreferrer">
+                <a
+                  className="hazel-button-secondary border-white/20"
+                  href={HAZEL_INFO.whatsappUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   WhatsApp Hazel
                   <MessageCircleMore className="h-4 w-4" strokeWidth={1.5} />
                 </a>
@@ -57,12 +60,12 @@ export default function ServicesPage() {
             <div className="relative">
               <div className="relative aspect-[0.92/1] overflow-hidden bg-black md:aspect-[1/1.04]">
                 <Image
-                  src={SERVICES_HERO_IMAGE}
+                  {...resolveHazelImageProps(HAZEL_IMAGES.servicesHero)}
+                  src={HAZEL_IMAGES.servicesHero}
                   alt="Hazel services editorial hero"
                   fill
                   priority
                   sizes="(min-width: 1024px) 56vw, 100vw"
-                  className="object-cover object-center saturate-90 contrast-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/45" />
                 <div className="absolute inset-x-0 bottom-0 p-5">
@@ -83,9 +86,9 @@ export default function ServicesPage() {
         <div className="hazel-shell">
           <div className="hazel-card p-6 md:p-8">
             <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
-            <div>
-              <p className="hazel-kicker text-[color:var(--hazel-soft-gold)]">Need help choosing?</p>
-              <h2 className="mt-4 text-3xl leading-tight md:text-5xl">
+              <div>
+                <p className="hazel-kicker text-[color:var(--hazel-soft-gold)]">Need help choosing?</p>
+                <h2 className="mt-4 text-3xl leading-tight md:text-5xl">
                   Ask Hazel for guidance and the right service match.
                 </h2>
                 <p className="mt-5 max-w-2xl text-sm text-white/70 md:text-base">

@@ -5,6 +5,7 @@ import { useEffect, useMemo, useState } from "react";
 
 import { ArrowUpRight } from "lucide-react";
 
+import { resolveHazelImageProps } from "@/lib/hazel-media";
 import { JournalArticle } from "@/lib/types";
 import { cn } from "@/lib/utils";
 
@@ -92,11 +93,11 @@ export function JournalBrowser({
                 <div className="grid gap-0 md:grid-cols-[0.92fr_1.08fr]">
                   <div className="relative min-h-[16rem] overflow-hidden">
                     <Image
+                      {...resolveHazelImageProps(article.image, "transition duration-500 group-hover:scale-[1.03]")}
                       src={article.image}
                       alt={article.title}
                       fill
                       sizes="(min-width: 1024px) 24rem, 100vw"
-                      className="object-cover transition duration-500 group-hover:scale-[1.03]"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/72 via-black/16 to-transparent" />
                     <div className="absolute inset-x-0 bottom-0 p-5">
@@ -132,11 +133,11 @@ export function JournalBrowser({
           <div className="grid lg:grid-cols-[1fr_0.9fr]">
             <div className="relative min-h-[18rem] lg:min-h-full">
               <Image
+                {...resolveHazelImageProps(selected.image)}
                 src={selected.image}
                 alt={selected.title}
                 fill
                 sizes="(min-width: 1024px) 55vw, 100vw"
-                className="object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/72 via-black/18 to-transparent" />
             </div>
@@ -166,4 +167,3 @@ export function JournalBrowser({
     </>
   );
 }
-

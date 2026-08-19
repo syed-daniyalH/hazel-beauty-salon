@@ -4,6 +4,7 @@ import { ReactNode } from "react";
 
 import { ArrowUpRight } from "lucide-react";
 
+import { resolveHazelImageProps } from "@/lib/hazel-media";
 import { cn } from "@/lib/utils";
 
 export function PageHero({
@@ -30,7 +31,9 @@ export function PageHero({
   note?: ReactNode;
   className?: string;
   imagePriority?: boolean;
-  }) {
+}) {
+  const imageProps = resolveHazelImageProps(image);
+
   const renderCta = (cta: { label: string; href: string }, className: string) => {
     const isExternal = /^(https?:\/\/|mailto:|tel:|#)/.test(cta.href);
 
@@ -75,14 +78,14 @@ export function PageHero({
 
           <div className="relative">
             <div className="absolute -inset-6 -z-10 rounded-none bg-[radial-gradient(circle_at_center,rgba(201,154,56,0.12),transparent_60%)]" />
-            <div className="relative aspect-[4/5] overflow-hidden bg-[color:var(--hazel-bg)]">
+            <div className="relative aspect-[4/5] overflow-hidden bg-[color:var(--hazel-bg)] md:aspect-[5/6]">
               <Image
+                {...imageProps}
                 src={image}
                 alt={imageAlt}
                 fill
                 priority={imagePriority}
                 sizes="(min-width: 1024px) 48vw, 100vw"
-                className="object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-b from-black/18 via-black/8 to-black/55" />
               <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-[color:var(--hazel-bg)] to-transparent" />
