@@ -13,7 +13,7 @@ const SERVICES_HERO_IMAGE =
 export const metadata = buildPageMetadata({
   title: "Services",
   description:
-    "Search the verified Hazel menu by hair, skin, makeup, bridal, waxing, and finishing services. Some items are quote-based and marked Ask Hazel.",
+    "Search the verified Hazel menu by hair, facials, makeup, waxing, and manicure/pedicure services. Some items are quote-based and marked Ask Hazel.",
   path: "/services",
   image: SERVICES_HERO_IMAGE,
 });
@@ -27,15 +27,17 @@ export default function ServicesPage() {
             <div className="relative z-10 max-w-xl">
               <p className="hazel-kicker text-[color:var(--hazel-soft-gold)]">Hazel Services</p>
               <h1 className="mt-6 max-w-[10ch] text-[clamp(3.25rem,6vw,6.5rem)] leading-[0.9] tracking-[-0.04em] text-white">
-                BEAUTY,
+                VERIFIED
                 <br />
-                <span className="italic text-[color:var(--hazel-soft-gold)]">DESIGNED</span>
+                <span className="italic text-[color:var(--hazel-soft-gold)]">SERVICES,</span>
                 <br />
-                AROUND YOU.
+                THOUGHTFULLY
+                <br />
+                TAILORED.
               </h1>
               <p className="mt-6 max-w-md text-sm text-white/74 md:text-base">
-                Experience precision craftsmanship and personalised care. Our curated services are tailored to
-                elevate your natural elegance in an atmosphere of pure tranquility.
+                Browse the current Hazel menu by category, search for a treatment, and send a booking request when
+                you are ready.
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-4">
                 <Link className="hazel-button-primary" href="/book-appointment">
@@ -60,7 +62,7 @@ export default function ServicesPage() {
                   fill
                   priority
                   sizes="(min-width: 1024px) 56vw, 100vw"
-                  className="object-cover object-center grayscale contrast-110"
+                  className="object-cover object-center saturate-90 contrast-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/45" />
                 <div className="absolute inset-x-0 bottom-0 p-5">
@@ -81,10 +83,10 @@ export default function ServicesPage() {
         <div className="hazel-shell">
           <div className="hazel-card p-6 md:p-8">
             <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
-              <div>
-                <p className="hazel-kicker text-[color:var(--hazel-soft-gold)]">Need help choosing?</p>
-                <h2 className="mt-4 text-3xl leading-tight md:text-5xl">
-                  Ask Hazel for guidance and a confirmed appointment window.
+            <div>
+              <p className="hazel-kicker text-[color:var(--hazel-soft-gold)]">Need help choosing?</p>
+              <h2 className="mt-4 text-3xl leading-tight md:text-5xl">
+                  Ask Hazel for guidance and the right service match.
                 </h2>
                 <p className="mt-5 max-w-2xl text-sm text-white/70 md:text-base">
                   The salon menu includes fixed prices and quote-based entries. If you are uncertain about the right

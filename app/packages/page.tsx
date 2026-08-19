@@ -40,7 +40,7 @@ export default function PackagesPage() {
         imageAlt="Hazel packages hero"
         primaryCta={{ label: "Package Enquiry", href: "#package-form" }}
         secondaryCta={{ label: "WhatsApp Hazel", href: HAZEL_INFO.whatsappUrl }}
-        note="These packages come from the stitched Figma exports and use only verified pricing or Ask Hazel where the quote must be confirmed."
+        note="These packages use verified pricing where available and Ask Hazel where the quote must be confirmed."
       />
 
       <section className="hazel-section pt-0">

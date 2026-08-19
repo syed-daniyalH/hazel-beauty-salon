@@ -12,10 +12,10 @@ import { SectionHeading } from "@/components/section-heading";
 import { buildPageMetadata } from "@/lib/seo";
 import {
   HAZEL_BRIDAL_DIARIES,
+  HAZEL_BRIDAL_SERVICES,
   HAZEL_FAQS,
   HAZEL_IMAGES,
   HAZEL_INFO,
-  HAZEL_SERVICES,
 } from "@/lib/hazel-data";
 
 export const metadata = buildPageMetadata({
@@ -33,7 +33,6 @@ const editorialIconMap = {
   gem: Gem,
 } as const;
 
-const bridalServices = HAZEL_SERVICES.filter((service) => service.category === "bridal");
 const bridalDiaryItems = HAZEL_BRIDAL_DIARIES.map((item) => ({
   id: item.id,
   title: item.title,
@@ -66,7 +65,7 @@ export default function BridalPage() {
         imageAlt="Hazel bridal editorial hero"
         primaryCta={{ label: "Request Consultation", href: "#bridal-consultation" }}
         secondaryCta={{ label: "WhatsApp Hazel", href: HAZEL_INFO.whatsappUrl }}
-        note="The bridal process is consultative. Pricing is only verified from the stitched menu exports."
+        note="The bridal process is consultative. Pricing is verified on the bridal page and confirmed after review."
       />
 
       <section className="hazel-section pt-0">
@@ -135,11 +134,11 @@ export default function BridalPage() {
           <SectionHeading
             eyebrow="Verified Bridal Services"
             title="What the bridal menu actually includes"
-            summary="These are the verified bridal services visible in the stitched Hazel exports. Open them directly or ask Hazel for a tailored quote."
+            summary="These are the verified bridal services available on the bridal page. Open them directly or ask Hazel for a tailored quote."
           />
 
           <div className="mt-10 grid gap-5 lg:grid-cols-3">
-            {bridalServices.map((service) => (
+            {HAZEL_BRIDAL_SERVICES.map((service) => (
               <article key={service.id} className="hazel-card p-6">
                 <p className="hazel-meta text-[color:var(--hazel-soft-gold)]">{service.priceLabel}</p>
                 <h3 className="mt-3 text-2xl leading-tight">{service.name}</h3>
@@ -193,7 +192,7 @@ export default function BridalPage() {
                 { name: "notes", label: "Notes", type: "textarea", placeholder: "Add jewelry, time, or makeup references", span: 2, rows: 5, required: false },
               ]}
               queryPrefill={[{ param: "look", field: "look" }]}
-              note="Bridal consultation requests are reviewed manually. No live scheduling is shown on this site."
+              note="Bridal consultation requests are reviewed manually. No real-time slots are shown on this site."
             />
           </Suspense>
         </div>

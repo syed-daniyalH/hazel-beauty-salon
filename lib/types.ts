@@ -11,6 +11,14 @@ export type SitePath =
   | "/contact"
   | "/book-appointment";
 
+export type ServiceCategory =
+  | "facials-skin"
+  | "hair"
+  | "makeup"
+  | "waxing-brows"
+  | "manicure-pedicure"
+  | "bridal";
+
 export interface NavLink {
   label: string;
   href: SitePath;
@@ -20,7 +28,7 @@ export interface NavLink {
 export interface ServiceItem {
   id: string;
   name: string;
-  category: "hair" | "skin" | "makeup" | "bridal" | "waxing" | "hands-feet";
+  category: ServiceCategory;
   section: string;
   priceLabel: string;
   summary: string;

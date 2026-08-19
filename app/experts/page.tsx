@@ -51,7 +51,7 @@ export default function ExpertsPage() {
           <SectionHeading
             eyebrow="The Hazel Standard"
             title="A collective approach, not a made-up roster."
-            summary="The stitched exports emphasize personal care, a professional approach, hygiene, and occasion expertise. Those four ideas frame the studio language here."
+            summary="Personal care, professionalism, hygiene, and occasion expertise frame the studio language here."
           />
 
           <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
@@ -138,4 +138,3 @@ export default function ExpertsPage() {
     </>
   );
 }
-

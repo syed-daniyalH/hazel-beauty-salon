@@ -30,9 +30,9 @@ export function PageHero({
   note?: ReactNode;
   className?: string;
   imagePriority?: boolean;
-}) {
+  }) {
   const renderCta = (cta: { label: string; href: string }, className: string) => {
-    const isExternal = /^https?:\/\//.test(cta.href);
+    const isExternal = /^(https?:\/\/|mailto:|tel:|#)/.test(cta.href);
 
     if (isExternal) {
       return (

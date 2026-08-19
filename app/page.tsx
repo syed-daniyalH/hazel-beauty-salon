@@ -17,9 +17,9 @@ import {
 } from "@/lib/hazel-data";
 
 export const metadata = buildPageMetadata({
-  title: "Hazel Beauty Salon",
+  title: "Hazel Beauty Salon, Johar Town, Lahore",
   description:
-    "Hazel Beauty Salon brings the stitched noir-and-gold editorial identity to a responsive public website with verified services, packages, bridal consultation, and appointment requests.",
+    "Hazel Beauty Salon in Johar Town, Lahore offers verified hair, skin, makeup, bridal, waxing, and package services by appointment request.",
   path: "/",
 });
 
@@ -31,32 +31,36 @@ const editorialIconMap = {
 } as const;
 
 export default function HomePage() {
-  const featuredServices = HAZEL_SERVICES.slice(0, 4);
+  const featuredServiceIds = new Set([
+    "facial-gold-jelly",
+    "hair-layered-styling",
+    "makeup-hairstyling",
+    "waxing-eyebrows-upper-lips-forehead",
+  ]);
+  const featuredServices = HAZEL_SERVICES.filter((service) => featuredServiceIds.has(service.id));
   const featuredPackages = HAZEL_PACKAGE_ITEMS.slice(0, 2);
 
   return (
     <>
       <PageHero
-        eyebrow="Hazel Beauty Salon"
+        eyebrow="Johar Town · Lahore"
         title={
           <>
             BEAUTY,
             <br />
-            <span className="italic text-[color:var(--hazel-soft-gold)]">DESIGNED</span>
-            <br />
-            AROUND YOU.
+            <span className="italic text-[color:var(--hazel-soft-gold)]">PERFECTED.</span>
           </>
         }
         summary={
           <>
             Hazel is an editorial beauty salon in Johar Town, Lahore, built around verified hair, skin, makeup,
-            bridal, waxing, and package services. Bookings are handled as appointment requests, not live scheduling.
+            bridal, waxing, and package services. Bookings are handled as appointment requests, not real-time scheduling.
           </>
         }
         image={HAZEL_IMAGES.homeHero}
         imageAlt="Hazel Beauty Salon editorial hero"
-        primaryCta={{ label: "Book Appointment", href: "/book-appointment" }}
-        secondaryCta={{ label: "View Services", href: "/services" }}
+        primaryCta={{ label: "Book Your Experience", href: "/book-appointment" }}
+        secondaryCta={{ label: "Explore Services", href: "/services" }}
         note={
           <>
             {HAZEL_INFO.byAppointmentNote} Use WhatsApp or the request forms to confirm availability.
@@ -66,13 +70,13 @@ export default function HomePage() {
 
       <section className="hazel-section pt-0">
         <div className="hazel-shell">
-          <SectionHeading
+            <SectionHeading
             eyebrow="The Hazel Standard"
             title={
               <>
                 Quiet, precise, and tailored.
                 <br />
-                The salon experience is built from the stitched brand system.
+                The salon experience is built on the same noir-and-gold system across the site.
               </>
             }
             summary="Sharp corners, cinematic lighting, thin-line iconography, and a calm private concierge feel shape every page and interaction."
@@ -226,4 +230,3 @@ export default function HomePage() {
     </>
   );
 }
-

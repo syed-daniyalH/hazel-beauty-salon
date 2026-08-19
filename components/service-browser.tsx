@@ -111,7 +111,7 @@ export function ServiceBrowser({ services }: { services: ServiceItem[] }) {
                   {visibleCount} service{visibleCount === 1 ? "" : "s"} visible
                 </p>
                 <p className="max-w-[40rem] xl:text-right">
-                  Prices are verified from the stitched Hazel exports. Ask Hazel appears where the price is quote-based.
+                  Prices are verified from Hazel&apos;s current menu. Ask Hazel appears where the price is quote-based.
                 </p>
               </div>
             </div>

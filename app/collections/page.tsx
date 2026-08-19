@@ -36,7 +36,7 @@ export default function CollectionsPage() {
         imageAlt="Hazel collections hero"
         primaryCta={{ label: "Book Appointment", href: "/book-appointment" }}
         secondaryCta={{ label: "WhatsApp Hazel", href: HAZEL_INFO.whatsappUrl }}
-        note="The portfolio viewer is a direct reflection of the stitched Hazel exports and stays within the existing brand language."
+        note="The portfolio viewer stays within the existing Hazel brand language."
       />
 
       <PortfolioViewer
@@ -72,4 +72,3 @@ export default function CollectionsPage() {
     </>
   );
 }
-

@@ -30,7 +30,7 @@ export default function TheHazelEditPage() {
         }
         summary={
           <>
-            The Hazel Edit is a stitched lookbook of bridal, hair, makeup, and beauty-care imagery. Click any piece to
+            The Hazel Edit is a curated lookbook of bridal, hair, makeup, and beauty-care imagery. Click any piece to
             open the viewer and explore the editorial archive.
           </>
         }
@@ -48,7 +48,7 @@ export default function TheHazelEditPage() {
             <h2 className="mt-4 text-3xl leading-tight md:text-5xl">Regal Barat</h2>
             <h3 className="mt-4 text-2xl italic text-[color:var(--hazel-soft-gold)]">“Precision in every detail.”</h3>
             <p className="mt-5 text-sm text-white/70 md:text-base">
-              This section reflects the stitched editorial exports where imagery carries the story. The page remains a
+              This section reflects the editorial direction of the brand, where imagery carries the story. The page remains a
               website, not a product carousel or commerce flow.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
@@ -104,4 +104,3 @@ export default function TheHazelEditPage() {
     </>
   );
 }
-

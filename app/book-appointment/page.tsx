@@ -13,7 +13,7 @@ import { HAZEL_FAQS, HAZEL_IMAGES, HAZEL_INFO, HAZEL_PACKAGE_ITEMS, HAZEL_SERVIC
 export const metadata = buildPageMetadata({
   title: "Book Appointment",
   description:
-    "Send Hazel Beauty Salon an appointment request for services, packages, or bridal consultations. This is not live scheduling.",
+    "Send Hazel Beauty Salon an appointment request for services, packages, or bridal consultations. The site does not show real-time slots.",
   path: "/book-appointment",
   image: HAZEL_IMAGES.servicesHero,
 });
@@ -32,15 +32,15 @@ export default function BookAppointmentPage() {
         }
         summary={
           <>
-            Booking is an appointment request, not live scheduling. Use the form to tell Hazel what you want, and the
-            salon will contact you to confirm availability.
+            Booking is an appointment request, not real-time scheduling. Use the form to tell Hazel what you want,
+            and the salon will contact you to confirm availability.
           </>
         }
         image={HAZEL_IMAGES.servicesHero}
         imageAlt="Hazel appointment request hero"
         primaryCta={{ label: "Appointment Form", href: "#appointment-form" }}
         secondaryCta={{ label: "WhatsApp Hazel", href: HAZEL_INFO.whatsappUrl }}
-        note="Your appointment request has been received. Hazel will contact you to confirm availability."
+        note="Booking is request-based. Hazel will contact you to confirm availability."
       />
 
       <section className="hazel-section pt-0">
@@ -128,7 +128,7 @@ export default function BookAppointmentPage() {
                 { param: "service", field: "serviceInterest" },
                 { param: "package", field: "serviceInterest" },
               ]}
-              note="This page intentionally avoids live scheduling. Hazel will contact you after the request is received."
+              note="This page intentionally avoids real-time slots. Hazel will contact you after the request is received."
             />
           </Suspense>
         </div>
