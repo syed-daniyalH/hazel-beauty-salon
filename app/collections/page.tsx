@@ -19,13 +19,7 @@ export default function CollectionsPage() {
     <>
       <PageHero
         eyebrow="Hazel Collections"
-        title={
-          <>
-            EDITORIAL
-            <br />
-            COLLECTIONS
-          </>
-        }
+        title="Collections"
         summary={
           <>
             A quiet archive of Hazel bridal, hair, makeup, and beauty-care imagery. Click any piece to open the viewer
@@ -36,7 +30,7 @@ export default function CollectionsPage() {
         imageAlt="Hazel collections hero"
         primaryCta={{ label: "Book Appointment", href: "/book-appointment" }}
         secondaryCta={{ label: "WhatsApp Hazel", href: HAZEL_INFO.whatsappUrl }}
-        note="The portfolio viewer stays within the existing Hazel brand language."
+        note="The portfolio viewer stays within the same Hazel brand language used across the site."
       />
 
       <PortfolioViewer
@@ -53,7 +47,7 @@ export default function CollectionsPage() {
               <div>
                 <p className="hazel-kicker text-[color:var(--hazel-soft-gold)]">Want a similar finish?</p>
                 <h2 className="mt-4 text-3xl leading-tight md:text-5xl">
-                  Send the reference look in your appointment request.
+                  Send the reference look with your appointment request.
                 </h2>
               </div>
               <div className="flex flex-wrap gap-4 lg:justify-end">

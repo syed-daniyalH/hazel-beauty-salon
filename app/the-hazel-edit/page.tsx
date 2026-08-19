@@ -22,24 +22,18 @@ export default function TheHazelEditPage() {
     <>
       <PageHero
         eyebrow="The Hazel Edit"
-        title={
-          <>
-            THE HAZEL EDIT
-            <br />
-            <span className="italic text-[color:var(--hazel-soft-gold)]">Precision in every detail.</span>
-          </>
-        }
+        title="The Hazel Edit"
         summary={
           <>
-            The Hazel Edit is a curated lookbook of bridal, hair, makeup, and beauty-care imagery. Click any piece to
-            open the viewer and explore the editorial archive.
+            The Hazel Edit is a lookbook of bridal, hair, makeup, and beauty-care imagery. Click any piece to
+            open the viewer and explore the archive.
           </>
         }
         image={HAZEL_IMAGES.editHero}
         imageAlt="Hazel edit editorial hero"
         primaryCta={{ label: "View Collections", href: "/collections" }}
         secondaryCta={{ label: "Book Appointment", href: "/book-appointment" }}
-        note="The lookbook is intentionally quiet and cinematic, echoing the brand's noir-and-gold visual language."
+        note="The lookbook uses the same noir-and-gold brand language as the rest of the site."
       />
 
       <section className="hazel-section pt-0">
@@ -49,8 +43,8 @@ export default function TheHazelEditPage() {
             <h2 className="mt-4 text-3xl leading-tight md:text-5xl">Regal Barat</h2>
             <h3 className="mt-4 text-2xl italic text-[color:var(--hazel-soft-gold)]">“Precision in every detail.”</h3>
             <p className="mt-5 text-sm text-white/70 md:text-base">
-              This section reflects the editorial direction of the brand, where imagery carries the story. The page remains a
-              website, not a product carousel or commerce flow.
+              This page keeps the archive separate from the booking flow. It is for browsing images, not shopping or
+              checkout.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Link className="hazel-button-primary" href="/services">
@@ -86,7 +80,7 @@ export default function TheHazelEditPage() {
       <section className="hazel-section pt-0">
         <div className="hazel-shell">
           <SectionHeading
-            eyebrow="Let's create your Hazel look"
+            eyebrow="Need a similar finish?"
             title="A request is all Hazel needs to begin."
             summary="Send your appointment request with your preferred service or package, and Hazel will follow up to confirm availability."
           />

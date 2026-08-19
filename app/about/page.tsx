@@ -32,19 +32,19 @@ const ABOUT_PHILOSOPHY: Array<{
   {
     title: "Listen",
     description:
-      "Before we touch a brush or shears, we listen. Understanding your vision, your lifestyle, and your comfort is the foundation of our craft.",
+      "Start with the event, the look you have in mind, and what feels comfortable.",
     icon: MessageCircle,
   },
   {
-    title: "Create",
+    title: "Shape",
     description:
-      "Artistry meets precision. We blend technical mastery with intuitive creativity to design looks that are both timeless and uniquely yours.",
+      "Choose the cut, tone, or makeup direction around the person in the chair.",
     icon: Sparkles,
   },
   {
-    title: "Perfect",
+    title: "Finish",
     description:
-      "Excellence is in the details. We obsess over the final polish, ensuring every element of your experience meets the exacting Hazel standard.",
+      "Check the last details so the result looks right in real light.",
     icon: Gem,
   },
 ];
@@ -69,17 +69,16 @@ export default function AboutPage() {
         <div className="relative z-10 flex min-h-[calc(100vh-5rem)] items-center justify-center px-0 py-20">
           <div className="hazel-shell w-full text-center">
             <div className="mx-auto max-w-4xl">
-              <h1 className="mx-auto max-w-4xl text-[clamp(3rem,7vw,7.5rem)] leading-[0.92] tracking-[-0.04em] text-white drop-shadow-[0_0_28px_rgba(0,0,0,0.35)]">
-                BEAUTY IS PERSONAL.
-                <br />
-                <span className="italic text-[color:var(--hazel-soft-gold)]">SO IS EVERYTHING WE DO.</span>
+              <h1 className="mx-auto max-w-4xl text-[clamp(2.4rem,5vw,4.25rem)] leading-[0.96] tracking-[-0.04em] text-white drop-shadow-[0_0_28px_rgba(0,0,0,0.35)]">
+                Beauty is personal. So is everything we do.
               </h1>
               <p className="mx-auto mt-6 max-w-2xl text-base font-light text-white/78 md:text-xl">
-                A premium sanctuary in Johar Town, Lahore, where expert artistry meets a deeply personal touch.
+                A private salon in Johar Town, Lahore, built around careful consultations, verified services, and a
+                calm booking flow.
               </p>
               <div className="mt-10 flex flex-wrap justify-center gap-4">
                 <a className="hazel-button-primary" href="#philosophy">
-                  Discover our philosophy
+                  See how we work
                   <ArrowUpRight className="h-4 w-4" strokeWidth={1.5} />
                 </a>
               </div>
@@ -106,25 +105,20 @@ export default function AboutPage() {
 
             <div className="lg:col-span-6 lg:col-start-7">
               <p className="hazel-kicker text-[color:var(--hazel-gold)]">The Hazel Story</p>
-              <h2 className="mt-5 text-[clamp(2.5rem,4vw,4.75rem)] leading-[0.96] tracking-[-0.03em] text-[#121212]">
-                CREATED FOR BEAUTY
-                <br />
-                <span className="italic text-[#7b5800]">THAT FEELS LIKE YOU.</span>
+              <h2 className="mt-5 text-[clamp(2.2rem,4vw,4.25rem)] leading-[0.96] tracking-[-0.03em] text-[#121212]">
+                Built for beauty that feels like you.
               </h2>
 
               <div className="mt-8 space-y-6 text-base text-[#313030] md:text-lg">
                 <p>
-                  At Hazel, we believe that true luxury lies in being seen. Our salon wasn&apos;t born from a desire
-                  to dictate trends, but to uncover the unique aesthetic identity of every individual who walks
-                  through our doors.
+                  Hazel started with a simple idea: beauty care should feel calmer, clearer, and more personal.
                 </p>
                 <p>
-                  We approach beauty not as a standard to meet, but as a deeply personal narrative to be written.
-                  Every stroke of the brush, every consultation, and every treatment is a dialogue between our
-                  artisans and your inherent elegance.
+                  We begin with the conversation, then shape the cut, color, makeup, or bridal look around your
+                  features, your event, and your schedule.
                 </p>
                 <p className="border-t border-[color:var(--hazel-gold)]/30 pt-6">
-                  Professional care should always feel personal. Welcome to your new beauty sanctuary.
+                  If you want careful work and direct communication, that is the standard we try to keep every day.
                 </p>
               </div>
             </div>
@@ -139,7 +133,7 @@ export default function AboutPage() {
 
         <div className="hazel-shell relative z-10">
           <div className="text-center">
-            <p className="hazel-kicker text-[color:var(--hazel-soft-gold)]">Our Philosophy</p>
+            <p className="hazel-kicker text-[color:var(--hazel-soft-gold)]">How we work</p>
             <div className="mx-auto mt-6 h-px w-16 bg-[color:var(--hazel-soft-gold)]" />
           </div>
 
@@ -156,7 +150,7 @@ export default function AboutPage() {
                     className="mb-8 h-12 w-12 text-[color:var(--hazel-soft-gold)] transition-transform duration-500 group-hover:scale-105"
                     strokeWidth={1.5}
                   />
-                  <h3 className="mb-4 text-2xl uppercase tracking-[0.18em] text-white md:text-[1.65rem]">
+                  <h3 className="mb-4 text-2xl text-white md:text-[1.65rem]">
                     {item.title}
                   </h3>
                   <p className="text-sm text-white/70 md:text-base">{item.description}</p>
@@ -172,12 +166,11 @@ export default function AboutPage() {
           <div className="grid gap-8 lg:grid-cols-[1fr_0.98fr] lg:items-center">
             <div>
               <p className="hazel-kicker text-[color:var(--hazel-soft-gold)]">The Sanctuary</p>
-              <h2 className="mt-5 text-[clamp(2.5rem,4vw,4.75rem)] leading-[0.94] tracking-[-0.03em] text-white">
-                Located in the heart of Johar Town, our salon is designed to be an escape from the city&apos;s pulse.
+              <h2 className="mt-5 text-[clamp(2.2rem,4vw,4.25rem)] leading-[0.94] tracking-[-0.03em] text-white">
+                Hazel is in Johar Town, Lahore, with verified contact details and a simple appointment flow.
               </h2>
               <p className="mt-6 max-w-2xl text-base text-white/70 md:text-lg">
-                A quiet space dedicated to your rejuvenation, with verified contact details and a concierge flow that
-                keeps the experience personal.
+                Call, WhatsApp, email, or get directions from this page without having to dig through the site.
               </p>
 
               <div className="mt-10 space-y-6">
@@ -256,20 +249,20 @@ export default function AboutPage() {
 
       <section className="bg-[color:var(--hazel-bg)] py-16 text-center md:py-24">
         <div className="hazel-shell">
-          <h2 className="mx-auto max-w-5xl text-[clamp(2.5rem,4.5vw,4.8rem)] leading-[0.95] tracking-[-0.04em] italic text-white">
-            &quot;WHERE BEAUTY MEETS PERFECTION.&quot;
+          <h2 className="mx-auto max-w-5xl text-[clamp(2.2rem,4vw,4.25rem)] leading-[0.95] tracking-[-0.04em] text-white">
+            Beauty care should feel calm, clear, and personal.
           </h2>
         </div>
       </section>
 
       <section className="border-b border-white/10 bg-[color:var(--hazel-ivory)] py-20 text-center text-[#121212] md:py-28">
         <div className="hazel-shell">
-          <p className="hazel-kicker text-[color:var(--hazel-gold)]">Private concierge support</p>
-          <h2 className="mt-5 text-[clamp(2.5rem,4vw,4.75rem)] leading-[0.96] tracking-[-0.03em] text-[#121212]">
-            LET&apos;S CREATE SOMETHING BEAUTIFUL.
+          <p className="hazel-kicker text-[color:var(--hazel-gold)]">Plan your visit</p>
+          <h2 className="mt-5 text-[clamp(2.2rem,4vw,4.25rem)] leading-[0.96] tracking-[-0.03em] text-[#121212]">
+            Let&apos;s plan your visit.
           </h2>
           <p className="mx-auto mt-6 max-w-3xl text-base text-[#313030] md:text-lg">
-            Experience the Hazel standard of personalized beauty care.
+            Use the appointment request form when you are ready, and Hazel will follow up directly.
           </p>
           <div className="mt-10 flex flex-wrap justify-center gap-4">
             <Link

@@ -19,6 +19,7 @@ export function PageHero({
   note,
   className,
   imagePriority = true,
+  size = "inner",
 }: {
   eyebrow?: string;
   title: ReactNode;
@@ -31,8 +32,13 @@ export function PageHero({
   note?: ReactNode;
   className?: string;
   imagePriority?: boolean;
+  size?: "home" | "inner";
 }) {
   const imageProps = resolveHazelImageProps(image);
+  const titleClassName =
+    size === "home"
+      ? "text-[clamp(2.75rem,5.5vw,5.25rem)] leading-[0.94] tracking-[-0.04em] text-[color:var(--hazel-ivory)]"
+      : "text-[clamp(2.35rem,4.8vw,4.25rem)] leading-[0.96] tracking-[-0.04em] text-[color:var(--hazel-ivory)]";
 
   const renderCta = (cta: { label: string; href: string }, className: string) => {
     const isExternal = /^(https?:\/\/|mailto:|tel:|#)/.test(cta.href);
@@ -65,7 +71,7 @@ export function PageHero({
         >
           <div className="max-w-3xl">
             {eyebrow ? <p className="hazel-kicker mb-4 text-[color:var(--hazel-soft-gold)]">{eyebrow}</p> : null}
-            <h1 className="text-4xl leading-[0.95] text-[color:var(--hazel-ivory)] md:text-6xl xl:text-[5.5rem]">
+            <h1 className={titleClassName}>
               {title}
             </h1>
             {summary ? <div className="mt-6 max-w-2xl text-sm text-white/72 md:text-base">{summary}</div> : null}

@@ -25,10 +25,9 @@ export function SiteFooter() {
         <div className="grid gap-12 xl:grid-cols-[1.25fr_0.85fr_0.85fr_1fr]">
           <div className="max-w-xl">
             <p className="hazel-kicker text-[color:var(--hazel-soft-gold)]">HAZEL</p>
-            <h2 className="mt-4 text-3xl leading-tight md:text-5xl">Where Beauty Meets Perfection.</h2>
+            <h2 className="mt-4 text-3xl leading-tight md:text-5xl">Hazel Beauty Salon in Johar Town.</h2>
             <p className="mt-5 max-w-lg text-sm text-white/70 md:text-base">
-              Private concierge support, verified services, and appointment requests handled with a calm editorial
-              standard in Johar Town, Lahore.
+              Verified services, direct contact details, and appointment requests handled with care in Lahore.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Link className="hazel-button-primary" href="/book-appointment">
@@ -120,9 +119,9 @@ export function SiteFooter() {
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col gap-4 border-t border-white/10 pt-6 text-xs uppercase tracking-[0.16em] text-white/40 md:flex-row md:items-center md:justify-between">
-          <p>© 2026 Hazel Beauty Salon. All Rights Reserved.</p>
-          <p>Johar Town, Lahore · Booking is handled by appointment request only.</p>
+        <div className="mt-12 flex flex-col gap-4 border-t border-white/10 pt-6 text-xs text-white/40 md:flex-row md:items-center md:justify-between">
+          <p>© 2026 Hazel Beauty Salon. All rights reserved.</p>
+          <p>Johar Town, Lahore · Appointment requests only.</p>
         </div>
       </div>
     </footer>

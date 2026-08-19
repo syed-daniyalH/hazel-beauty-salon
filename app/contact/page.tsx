@@ -23,19 +23,11 @@ export default function ContactPage() {
     <>
       <PageHero
         eyebrow="Contact Hazel"
-        title={
-          <>
-            DIRECTIONS,
-            <br />
-            DETAILS,
-            <br />
-            AND REQUESTS.
-          </>
-        }
+        title="Directions, details, and requests."
         summary={
           <>
-            Use the verified contact details below, open the directions link, or send Hazel a message through the
-            contact form. The site keeps all interaction within the public website structure.
+            Use the contact details below, open the directions link, or send Hazel a message through the contact
+            form.
           </>
         }
         image={HAZEL_IMAGES.map}
@@ -107,11 +99,11 @@ export default function ContactPage() {
       <section className="hazel-section pt-0">
         <div className="hazel-shell">
           <div className="hazel-card p-6 md:p-8">
-            <div className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+          <div className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
               <div>
                 <p className="hazel-kicker text-[color:var(--hazel-soft-gold)]">Need a faster reply?</p>
                 <h2 className="mt-4 text-3xl leading-tight md:text-5xl">
-                  WhatsApp opens Hazel directly with the salon request message.
+                  WhatsApp opens Hazel directly with your message.
                 </h2>
               </div>
               <div className="flex flex-wrap gap-4 lg:justify-end">

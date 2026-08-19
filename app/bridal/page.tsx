@@ -47,54 +47,46 @@ export default function BridalPage() {
     <>
       <PageHero
         eyebrow="Bridal Experience"
-        title={
-          <>
-            YOUR MOMENT.
-            <br />
-            YOUR BEAUTY.
-            <br />
-            YOUR HAZEL.
-          </>
-        }
+        title="Bridal beauty, thoughtfully yours."
         summary={
           <>
-            Hazel bridal artistry is built around your event, venue, and personal reference points. Send a bridal
-            consultation request and Hazel will contact you to confirm availability.
+            Hazel bridal artistry is built around your event, venue, and reference points. Send a consultation
+            request and Hazel will contact you to confirm availability.
           </>
         }
         image={HAZEL_IMAGES.bridalHero}
         imageAlt="Hazel bridal editorial hero"
         primaryCta={{ label: "Request Consultation", href: "#bridal-consultation" }}
         secondaryCta={{ label: "WhatsApp Hazel", href: HAZEL_INFO.whatsappUrl }}
-        note="The bridal process is consultative. Pricing is verified on the bridal page and confirmed after review."
+        note="The bridal process is consultative. Pricing is confirmed after review."
       />
 
       <section className="hazel-section pt-0">
         <div className="hazel-shell grid gap-6 lg:grid-cols-[1fr_0.92fr] lg:items-stretch">
           <div className="hazel-card p-6 md:p-8">
-            <p className="hazel-kicker text-[color:var(--hazel-soft-gold)]">The Hazel Approach</p>
+            <p className="hazel-kicker text-[color:var(--hazel-soft-gold)]">How the bridal process works</p>
             <h2 className="mt-4 text-3xl leading-tight md:text-5xl">
-              We don&apos;t create one bridal look. We create yours.
+              Every bridal request starts with the event, the venue, and your comfort.
             </h2>
             <p className="mt-5 max-w-2xl text-sm text-white/70 md:text-base">
-              From Nikkah to Barat and Walima, Hazel designs each finish around the bride, the light, and the moment.
-              The goal is calm precision rather than a one-size-fits-all template.
+              From Nikkah to Barat and Walima, Hazel shapes each finish around the bride, the light, and the timing.
+              The goal is a calm process and a look that holds up through the day.
             </p>
             <div className="mt-8 grid gap-4 md:grid-cols-3">
               {[
                 {
                   title: "Listen",
-                  summary: "Understand the event, venue, jewelry, and comfort level before any direction is locked in.",
+                  summary: "Start with the event, the venue, the jewelry, and how you want the look to feel.",
                   icon: "leaf",
                 },
                 {
-                  title: "Create",
-                  summary: "Shape a look that matches the moment while keeping the finish polished and editorial.",
+                  title: "Plan",
+                  summary: "Choose the shape, coverage, and styling direction around the outfit and the day.",
                   icon: "sparkles",
                 },
                 {
-                  title: "Perfect",
-                  summary: "Refine tone, detail, and longevity so the final result feels considered and secure.",
+                  title: "Finish",
+                  summary: "Check tone, wear, and the details that matter in real light.",
                   icon: "badge-check",
                 },
               ].map((item) => {
@@ -127,15 +119,15 @@ export default function BridalPage() {
         items={bridalDiaryItems}
         eyebrow="The Bridal Diaries"
         title="Signature bridal stories"
-        summary="Nikkah, Mehndi, and Barat are shown as mood-led stories so you can explore the Hazel bridal direction before sending a request."
+        summary="Nikkah, Mehndi, and Barat are shown as a simple archive so you can explore the Hazel bridal direction before sending a request."
       />
 
       <section className="hazel-section pt-0">
         <div className="hazel-shell">
           <SectionHeading
             eyebrow="Verified Bridal Services"
-            title="What the bridal menu actually includes"
-            summary="These are the verified bridal services available on the bridal page. Open them directly or ask Hazel for a tailored quote."
+            title="What the bridal menu includes"
+            summary="These are the bridal services currently listed. Open them directly or ask Hazel for a tailored quote."
           />
 
           <div className="mt-10 grid gap-5 lg:grid-cols-3">
@@ -204,13 +196,13 @@ export default function BridalPage() {
       <section className="hazel-section pt-0">
         <div className="hazel-shell">
           <div className="hazel-card p-6 md:p-8">
-            <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
-              <div>
-                <p className="hazel-kicker text-[color:var(--hazel-soft-gold)]">Ready when you are</p>
-                <h2 className="mt-4 text-3xl leading-tight md:text-5xl">
-                  Tell Hazel the date and the look. Hazel will take it from there.
-                </h2>
-              </div>
+          <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+            <div>
+              <p className="hazel-kicker text-[color:var(--hazel-soft-gold)]">Ready when you are</p>
+              <h2 className="mt-4 text-3xl leading-tight md:text-5xl">
+                Send the date and the look, and Hazel will review the request.
+              </h2>
+            </div>
               <div className="flex flex-wrap gap-4 lg:justify-end">
                 <Link className="hazel-button-primary" href="/book-appointment">
                   Book Appointment

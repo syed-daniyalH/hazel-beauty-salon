@@ -26,32 +26,26 @@ export default function ExpertsPage() {
     <>
       <PageHero
         eyebrow="Our Experts"
-        title={
-          <>
-            THE STUDIO
-            <br />
-            BEHIND THE WORK.
-          </>
-        }
+        title="The studio behind the work."
         summary={
           <>
             Hazel does not invent staff bios or credentials. Instead, this page highlights the studio standard,
-            consultation rhythm, and the expertise Hazel applies to every request.
+            consultation rhythm, and the care Hazel applies to every request.
           </>
         }
         image={HAZEL_IMAGES.editEye}
         imageAlt="Hazel expert detail"
         primaryCta={{ label: "Book Appointment", href: "/book-appointment" }}
         secondaryCta={{ label: "Contact Hazel", href: "/contact" }}
-        note="Specific artist assignment, if applicable, is confirmed after the request is reviewed."
+        note="Specific artist assignment, if applicable, is confirmed after review."
       />
 
       <section className="hazel-section pt-0">
         <div className="hazel-shell">
           <SectionHeading
             eyebrow="The Hazel Standard"
-            title="A collective approach, not a made-up roster."
-            summary="Personal care, professionalism, hygiene, and occasion expertise frame the studio language here."
+            title="A clear studio standard."
+            summary="Personal care, professionalism, hygiene, and occasion work frame how Hazel handles each request."
           />
 
           <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
@@ -117,9 +111,9 @@ export default function ExpertsPage() {
           <div className="hazel-card p-6 md:p-8">
             <div className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
               <div>
-                <p className="hazel-kicker text-[color:var(--hazel-soft-gold)]">Need help deciding?</p>
+                <p className="hazel-kicker text-[color:var(--hazel-soft-gold)]">Not sure which service fits?</p>
                 <h2 className="mt-4 text-3xl leading-tight md:text-5xl">
-                  Send the look or service reference and Hazel will guide the request.
+                  Send a reference or description and Hazel will guide the request.
                 </h2>
               </div>
               <div className="flex flex-wrap gap-4 lg:justify-end">

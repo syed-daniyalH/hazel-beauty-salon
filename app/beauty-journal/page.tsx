@@ -19,17 +19,11 @@ export default function BeautyJournalPage() {
     <>
       <PageHero
         eyebrow="Beauty Journal"
-        title={
-          <>
-            EDITORIAL
-            <br />
-            NOTES.
-          </>
-        }
+        title="Editorial notes."
         summary={
           <>
-            The Hazel Journal is a concise editorial space for bridal notes, hair guidance, and practical pricing
-            explanations. Open any article to read the full piece.
+            The Hazel Journal is a concise space for bridal notes, hair guidance, and practical pricing explanations.
+            Open any article to read the full piece.
           </>
         }
         image={HAZEL_IMAGES.servicesStillLife}
@@ -53,7 +47,7 @@ export default function BeautyJournalPage() {
               <div>
                 <p className="hazel-kicker text-[color:var(--hazel-soft-gold)]">Need a request instead of a read?</p>
                 <h2 className="mt-4 text-3xl leading-tight md:text-5xl">
-                  Move from editorial notes to a real appointment request.
+                  Move from editorial notes to an appointment request.
                 </h2>
               </div>
               <div className="flex flex-wrap gap-4 lg:justify-end">
@@ -72,4 +66,3 @@ export default function BeautyJournalPage() {
     </>
   );
 }
-

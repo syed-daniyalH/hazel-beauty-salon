@@ -23,17 +23,11 @@ export default function BookAppointmentPage() {
     <>
       <PageHero
         eyebrow="Book Appointment"
-        title={
-          <>
-            SEND A REQUEST.
-            <br />
-            HAZEL WILL CONFIRM.
-          </>
-        }
+        title="Request an appointment."
         summary={
           <>
-            Booking is an appointment request, not real-time scheduling. Use the form to tell Hazel what you want,
-            and the salon will contact you to confirm availability.
+            Booking is request-based, not real-time scheduling. Use the form to tell Hazel what you need, and the
+            salon will contact you to confirm availability.
           </>
         }
         image={HAZEL_IMAGES.servicesHero}
@@ -47,7 +41,7 @@ export default function BookAppointmentPage() {
         <div className="hazel-shell">
           <SectionHeading
             eyebrow="How it works"
-            title="Simple, calm, and request-based."
+            title="How the request works"
             summary="The site does not show live calendar slots. Hazel reviews the request and follows up when availability is confirmed."
           />
 
@@ -90,10 +84,10 @@ export default function BookAppointmentPage() {
         <div className="hazel-shell grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
           <div className="space-y-6">
             <p className="hazel-kicker text-[color:var(--hazel-soft-gold)]">Appointment request</p>
-            <h2 className="text-3xl leading-tight md:text-5xl">Use the verified form to request your slot.</h2>
+            <h2 className="text-3xl leading-tight md:text-5xl">Use the form to request your appointment.</h2>
             <p className="max-w-xl text-sm text-white/70 md:text-base">
               The form can be prefilled from service and package links. If you already know the item you want, mention
-              it in the service field and Hazel will take it from there.
+              it in the service field and Hazel will route it correctly.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link className="hazel-button-primary" href="/services">
@@ -141,9 +135,9 @@ export default function BookAppointmentPage() {
           <div className="hazel-card p-6 md:p-8">
             <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
               <div>
-                <p className="hazel-kicker text-[color:var(--hazel-soft-gold)]">Still choosing?</p>
+                <p className="hazel-kicker text-[color:var(--hazel-soft-gold)]">Not sure what to book?</p>
                 <h2 className="mt-4 text-3xl leading-tight md:text-5xl">
-                  Service pages, bridal, and packages are all verified and ready to request.
+                  Services, packages, and bridal requests all use the same request flow.
                 </h2>
               </div>
               <div className="flex flex-wrap gap-4 lg:justify-end">

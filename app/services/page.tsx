@@ -24,18 +24,11 @@ export default function ServicesPage() {
           <div className="grid items-center gap-10 lg:grid-cols-[0.94fr_1.06fr]">
             <div className="relative z-10 max-w-xl">
               <p className="hazel-kicker text-[color:var(--hazel-soft-gold)]">Hazel Services</p>
-              <h1 className="mt-6 max-w-[10ch] text-[clamp(3.25rem,6vw,6.5rem)] leading-[0.9] tracking-[-0.04em] text-white">
-                VERIFIED
-                <br />
-                <span className="italic text-[color:var(--hazel-soft-gold)]">SERVICES,</span>
-                <br />
-                THOUGHTFULLY
-                <br />
-                TAILORED.
+              <h1 className="mt-6 max-w-[14ch] text-[clamp(2.35rem,4.8vw,4.25rem)] leading-[0.96] tracking-[-0.04em] text-white">
+                Verified services, organized by category.
               </h1>
               <p className="mt-6 max-w-md text-sm text-white/74 md:text-base">
-                Browse the current Hazel menu by category, search for a treatment, and send a booking request when
-                you are ready.
+                Browse the Hazel menu by category, search for a treatment, and send a request when you are ready.
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-4">
                 <Link className="hazel-button-primary" href="/book-appointment">
@@ -87,13 +80,13 @@ export default function ServicesPage() {
           <div className="hazel-card p-6 md:p-8">
             <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
               <div>
-                <p className="hazel-kicker text-[color:var(--hazel-soft-gold)]">Need help choosing?</p>
+                <p className="hazel-kicker text-[color:var(--hazel-soft-gold)]">Not sure what to book?</p>
                 <h2 className="mt-4 text-3xl leading-tight md:text-5xl">
-                  Ask Hazel for guidance and the right service match.
+                  Send the service name or a short description and Hazel will help narrow the match.
                 </h2>
                 <p className="mt-5 max-w-2xl text-sm text-white/70 md:text-base">
-                  The salon menu includes fixed prices and quote-based entries. If you are uncertain about the right
-                  service, send the request and Hazel will help you confirm the best fit.
+                  The menu includes both fixed prices and quote-based entries. If you are unsure, send the request and
+                  Hazel will help confirm the best fit.
                 </p>
               </div>
               <div className="flex flex-wrap gap-4 lg:justify-end">

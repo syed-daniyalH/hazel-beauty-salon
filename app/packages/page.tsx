@@ -24,31 +24,25 @@ export default function PackagesPage() {
     <>
       <PageHero
         eyebrow="Hazel Packages"
-        title={
-          <>
-            MORE BEAUTY.
-            <br />
-            BEAUTIFULLY TOGETHER.
-          </>
-        }
+        title="Beauty packages, made simple."
         summary={
           <>
-            Package combinations are kept editorial and simple. Some are priced directly while others are intentionally
-            marked Ask Hazel until the exact request is reviewed.
+            Package combinations are kept straightforward. Some are priced directly while others are confirmed after
+            review.
           </>
         }
         image={HAZEL_IMAGES.packagesHero}
         imageAlt="Hazel packages hero"
         primaryCta={{ label: "Package Enquiry", href: "#package-form" }}
         secondaryCta={{ label: "WhatsApp Hazel", href: HAZEL_INFO.whatsappUrl }}
-        note="These packages use verified pricing where available and Ask Hazel where the quote must be confirmed."
+        note="Fixed-price entries are listed openly. Ask Hazel entries are confirmed after review."
       />
 
       <section className="hazel-section pt-0">
         <div className="hazel-shell">
           <SectionHeading
-            eyebrow="Curated offerings"
-            title="Package cards from the verified Hazel menu"
+            eyebrow="Package options"
+            title="What each package includes"
             summary="Select a package to jump to the enquiry form. Hazel will contact you to confirm the details after review."
           />
 
@@ -78,7 +72,7 @@ export default function PackagesPage() {
                         </li>
                       ))}
                     </ul>
-                    {pkg.note ? <p className="mt-4 text-xs uppercase tracking-[0.16em] text-white/44">{pkg.note}</p> : null}
+                    {pkg.note ? <p className="mt-4 text-xs text-white/44">{pkg.note}</p> : null}
                     <div className="mt-6 flex flex-wrap gap-4">
                       <Link className="hazel-button-primary" href={`/packages?package=${encodeURIComponent(pkg.name)}#package-form`}>
                         Enquire
@@ -141,9 +135,9 @@ export default function PackagesPage() {
           <div className="hazel-card p-6 md:p-8">
             <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
               <div>
-                <p className="hazel-kicker text-[color:var(--hazel-soft-gold)]">Need another option?</p>
+                <p className="hazel-kicker text-[color:var(--hazel-soft-gold)]">Not sure which package fits?</p>
                 <h2 className="mt-4 text-3xl leading-tight md:text-5xl">
-                  Hazel can also confirm services and bridal requests from the full menu.
+                  Hazel can also help with services and bridal requests from the full menu.
                 </h2>
               </div>
               <div className="flex flex-wrap gap-4 lg:justify-end">

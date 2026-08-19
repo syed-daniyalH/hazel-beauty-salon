@@ -45,17 +45,16 @@ export default function HomePage() {
     <>
       <PageHero
         eyebrow="Johar Town · Lahore"
+        size="home"
         title={
           <>
-            BEAUTY,
-            <br />
-            <span className="italic text-[color:var(--hazel-soft-gold)]">PERFECTED.</span>
+            Beauty, <span className="italic text-[color:var(--hazel-soft-gold)]">made personal.</span>
           </>
         }
         summary={
           <>
             Hazel is an editorial beauty salon in Johar Town, Lahore, built around verified hair, skin, makeup,
-            bridal, waxing, and package services. Bookings are handled as appointment requests, not real-time scheduling.
+            bridal, waxing, and package services. Appointments are handled by request, not real-time scheduling.
           </>
         }
         image={HAZEL_IMAGES.homeHero}
@@ -71,16 +70,10 @@ export default function HomePage() {
 
       <section className="hazel-section pt-0">
         <div className="hazel-shell">
-            <SectionHeading
+          <SectionHeading
             eyebrow="The Hazel Standard"
-            title={
-              <>
-                Quiet, precise, and tailored.
-                <br />
-                The salon experience is built on the same noir-and-gold system across the site.
-              </>
-            }
-            summary="Sharp corners, cinematic lighting, thin-line iconography, and a calm private concierge feel shape every page and interaction."
+            title="Beauty care that feels personal."
+            summary="A calm palette, clear navigation, and practical request flows keep the experience easy to use."
           />
 
           <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
@@ -118,8 +111,8 @@ export default function HomePage() {
         <div className="hazel-shell">
           <SectionHeading
             eyebrow="Featured Services"
-            title="Verified menu highlights"
-            summary="A small entry point into the full Hazel menu. Open the services page for search, filtering, and details."
+            title="Services to start with"
+            summary="Open the full services page for search, filtering, and details."
           />
 
           <div className="mt-10 grid gap-5 lg:grid-cols-2">
@@ -163,9 +156,9 @@ export default function HomePage() {
       <section className="hazel-section pt-0">
         <div className="hazel-shell">
           <SectionHeading
-            eyebrow="Curated Packages"
-            title="Beauty combinations, beautifully together"
-            summary="Some packages are priced openly, while some are intentionally marked Ask Hazel until the exact request is confirmed."
+            eyebrow="Package options"
+            title="Beauty packages, made simple."
+            summary="Some packages have fixed prices. Others are confirmed after review."
           />
 
           <div className="mt-10 grid gap-5 lg:grid-cols-2">

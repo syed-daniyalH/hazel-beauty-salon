@@ -25,31 +25,31 @@ export const HAZEL_PATHS: Array<{ label: string; href: SitePath }> = [
 ];
 
 export const HAZEL_NAV_LINKS: NavLink[] = [
-  { label: "Home", href: "/", description: "Editorial landing page" },
+  { label: "Home", href: "/", description: "Salon overview and highlights" },
   { label: "Services", href: "/services", description: "Search the service menu" },
-  { label: "Bridal", href: "/bridal", description: "Bridal experiences and consultation" },
+  { label: "Bridal", href: "/bridal", description: "Bridal services and consultation" },
   { label: "The Hazel Edit", href: "/the-hazel-edit", description: "Portfolio and transformations" },
   { label: "About", href: "/about", description: "Philosophy and location" },
-  { label: "Packages", href: "/packages", description: "Curated beauty packages" },
-  { label: "Hazel Collections", href: "/collections", description: "Editorial collections gallery" },
-  { label: "Our Experts", href: "/experts", description: "The Hazel team approach" },
-  { label: "Beauty Journal", href: "/beauty-journal", description: "Editorial notes and tips" },
-  { label: "Contact", href: "/contact", description: "Directions and concierge details" },
+  { label: "Packages", href: "/packages", description: "Package options and enquiries" },
+  { label: "Hazel Collections", href: "/collections", description: "Portfolio archive" },
+  { label: "Our Experts", href: "/experts", description: "Studio standards and process" },
+  { label: "Beauty Journal", href: "/beauty-journal", description: "Practical notes and pricing" },
+  { label: "Contact", href: "/contact", description: "Directions, phone, and form" },
   { label: "Book Appointment", href: "/book-appointment", description: "Appointment request form" },
 ];
 
 export const HAZEL_PRIMARY_NAV_LINKS: NavLink[] = [
-  { label: "Home", href: "/", description: "Editorial landing page" },
+  { label: "Home", href: "/", description: "Salon overview and highlights" },
   { label: "Services", href: "/services", description: "Search the service menu" },
-  { label: "Bridal", href: "/bridal", description: "Bridal experiences and consultation" },
+  { label: "Bridal", href: "/bridal", description: "Bridal services and consultation" },
   { label: "About", href: "/about", description: "Philosophy and location" },
-  { label: "Packages", href: "/packages", description: "Curated beauty packages" },
-  { label: "Contact", href: "/contact", description: "Directions and concierge details" },
+  { label: "Packages", href: "/packages", description: "Package options and enquiries" },
+  { label: "Contact", href: "/contact", description: "Directions, phone, and form" },
 ];
 
 export const HAZEL_INFO = {
   name: "Hazel Beauty Salon",
-  tagline: "Beauty, perfected.",
+  tagline: "Beauty care, made personal.",
   location: "Johar Town, Lahore, Pakistan",
   address:
     "Dr Munir Avenue, Near Ghousia Chowk, College Road, Johar Town, Lahore 54770, Pakistan",
@@ -63,7 +63,7 @@ export const HAZEL_INFO = {
     "https://www.google.com/maps/search/?api=1&query=Dr+Munir+Avenue+Near+Ghousia+Chowk+College+Road+Johar+Town+Lahore+54770+Pakistan",
   whatsappUrl:
     "https://wa.me/923354464192?text=Hello%20Hazel%2C%20I%20would%20like%20to%20make%20an%20appointment%20request.",
-  byAppointmentNote: "Private concierge support, by appointment request only.",
+  byAppointmentNote: "Appointments are handled by request only.",
 };
 
 export const HAZEL_IMAGES = {
@@ -119,25 +119,25 @@ export const HAZEL_EDITORIAL_CARDS: EditorialCard[] = [
   {
     id: "personalised-care",
     title: "Personalised Care",
-    summary: "Tailored consultations to understand your unique needs.",
+    summary: "Consultations start with your event, routine, and what feels comfortable.",
     icon: "leaf",
   },
   {
     id: "professional-approach",
     title: "Professional Approach",
-    summary: "Expert techniques executed with a calm editorial hand.",
+    summary: "Clear communication and careful technique from start to finish.",
     icon: "badge-check",
   },
   {
     id: "hygiene-comfort",
     title: "Hygiene & Comfort",
-    summary: "Impeccable standards in a serene, relaxing environment.",
+    summary: "Clean tools, tidy stations, and a calm space.",
     icon: "sparkles",
   },
   {
     id: "occasion-expertise",
     title: "Occasion Expertise",
-    summary: "Specialized styling for weddings and major events.",
+    summary: "Bridal and event work tailored to the day.",
     icon: "gem",
   },
 ];
@@ -602,19 +602,19 @@ export const HAZEL_BRIDAL_DIARIES: BridalDiaryItem[] = [
   {
     id: "nikkah",
     title: "Nikkah",
-    summary: "Pure, ethereal elegance. Soft glamour focused on luminous skin and subtle, sophisticated details.",
+    summary: "A soft, steady look centered on clean skin and subtle detail.",
     image: HAZEL_IMAGES.bridalDiaryNikkah,
   },
   {
     id: "mehndi",
     title: "Mehndi",
-    summary: "Vibrant, joyful beauty. Expressive colors and flawless, long-lasting finishes designed for celebration.",
+    summary: "Brighter color and a finish that lasts through the celebration.",
     image: HAZEL_IMAGES.collectionBridal,
   },
   {
     id: "barat",
     title: "Barat",
-    summary: "Classic, dramatic opulence. Bold, timeless artistry that commands the room.",
+    summary: "A fuller bridal look with enough structure to hold through the day.",
     image: HAZEL_IMAGES.collectionBarat,
   },
 ];
